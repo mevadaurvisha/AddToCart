@@ -1,7 +1,7 @@
 
 const cartItems = document.getElementById('cart-items');
-    const cartCount = document.getElementById('cart-count');
-    const totalPriceElement = document.getElementById('total-price');
+const cartCount = document.getElementById('cart-count');
+const totalPriceElement = document.getElementById('total-price');
 
     const updateCount = () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -47,8 +47,7 @@ const cartItems = document.getElementById('cart-items');
              <img src="${item.thumbnail}" alt="${item.title}" width="100">
                 ${item.title} - $${item.price.toFixed(2)}
                 <div>
-                   
-                    <button class="btn btn-secondary btn-sm me-1 decrement-btn"><i class="bi bi-dash"></i></button>
+                   <button class="btn btn-secondary btn-sm me-1 decrement-btn"><i class="bi bi-dash"></i></button>
                     <span class="badge bg-primary rounded-pill">${item.quantity}</span>
                     <button class="btn btn-secondary btn-sm ms-1 increment-btn"><i class="bi bi-plus"></i></button>
                     <button class="btn btn-danger btn-sm ms-2 delete-btn"><i class="bi bi-trash-fill"></i></button>
